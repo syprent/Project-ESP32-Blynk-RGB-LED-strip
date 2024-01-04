@@ -1,5 +1,5 @@
 # Project-ESP32-Blynk-RGB-LED-strip
-Proyecto personal para controlar vía wifi desde cualqueir sitio una tira de lueces LED RGB de 4 pines mediante una placa esp32 y Blynk.
+Proyecto personal para controlar vía wifi desde cualquier sitio una tira de lueces LED RGB de 4 pines mediante una placa esp32 y Blynk.
 
 ## Para el proyecto se requiere
 - Tira luces Led RGB 4 pines
