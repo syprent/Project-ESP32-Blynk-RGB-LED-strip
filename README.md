@@ -1,5 +1,12 @@
 # Project-ESP32-Blynk-RGB-LED-strip
-Proyecto personal para contorlar vía wifi desde cualqueir sitio una tira de lueces LED RGB mediante una placa esp32 y Blynk.
+Proyecto personal para controlar vía wifi desde cualqueir sitio una tira de lueces LED RGB de 4 pines mediante una placa esp32 y Blynk.
+
+## Para el proyecto se requiere
+- Tira luces Led RGB 4 pines
+- Placa Esp32
+- Regulador de voltaje step down DC-DC LM2596
+- Driver ULN2003
+- Transformador más potente (opcional pero recomendable dado el consumo del regulador y la placa)
 
 ## Contexto
 Hace tiempo venía dándole vueltas a cómo manejar desde el celular una [tira de luces led RGB 5050 con 4 pines](https://www.amazon.com/-/es/SUPERNIGHT-24-Key-Control-remoto-controlador/dp/B01K7G96E2?th=1) que se manejaba a través de señales IR con un botón de 24 botones.
@@ -191,3 +198,12 @@ Luego en la app de Blynk, aparece automáticamente el template creado. Allí se 
 
 
 Ya con todo configurado, a disfrutar!
+
+
+## Consideraciones finales
+
+Es posible optimizar y pulir varios aspectos, en general estuve leyendo que el uso de `delay()` no es completamente "ideal", ya que existen otras alterantivas y timer, sobretodo considerando su uso con Blynk.
+
+A futuro quizás evaluar añadir el sensor infrarrojo a la placa ESP32, para que funcione a su vez por wwifi y por señales IR.
+
+Este proyecto cumplió su finalidad ya que fue realziado por mero hobby!
