@@ -62,8 +62,6 @@ La segunda forma (y utilizada en el proyecto), simplifica bastante el circuito c
 
 Finalmente, el esquema y circuito físico se ven así:
 
-[fotos del esquema y circuito fisico]
-
 <img src="img\circuit_diagram.png" alt="Diagrama del circuito" width="600"/>
 <img src="img\real_circuit.jpg" alt="Foto final del hardware" width="316"/>
 
@@ -135,7 +133,48 @@ Para evitar conflicto, al apretar un botón se llama a `stopSmoothFlash()`, func
 
 En el caso de los pines digitales de las funciones **Smooth (V4)** y **Flash (V5)** al detectar una señal de blynk actúan de manera similar que los slider previos, pero dando pie a iniciar el bucle `while` correspondiente en el core 1.
 
+```
+BLYNK_WRITE(V4){ //boton SMOOTH
+    //apagamos funcion en caso de que este activada
+    flashValue = 0;
+    Blynk.virtualWrite(V5,flashValue);
+    
+    smoothValue = param.asInt(); // Obtén el valor del boton V4
+    Serial.print("the value of Smooth = ");
+    Serial.println(smoothValue);
+  }
+```
+
 Finalmente, es de notar que el color de encendido se eligió de manera arbitraria.
+
+```
+BLYNK_WRITE(V6){ //ON OFF
+    stopSmoothFlash();
+    
+    int value = param.asInt(); // Obtén el valor del boton V6
+    Serial.print("the value of On/Off = ");
+    Serial.println(value);
+    if (value == 1){
+      //Actualizamos las variables
+      redValue = 60;
+      greenValue = 20;
+      blueValue = 0;
+    }else{
+      //Actualizamos las variables
+      redValue = 0;
+      greenValue = 0;
+      blueValue = 0;
+      }
+    //escribimos los valores de los pines al encender en amarillo suave
+    analogWrite(REDPIN, redValue);
+    analogWrite(GREENPIN, greenValue);
+    analogWrite(BLUEPIN, blueValue);
+    // Actualiza los sliders de colores en la aplicación Blynk
+    Blynk.virtualWrite(V0, redValue);
+    Blynk.virtualWrite(V1, greenValue);
+    Blynk.virtualWrite(V2, blueValue);
+  }
+  ```
 
 ## Configuración de la plataforma Blynk
 
