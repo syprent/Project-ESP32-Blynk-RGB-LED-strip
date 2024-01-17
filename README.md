@@ -74,14 +74,13 @@ La primera forma utiliza una configuración tipo Darlington en un único compone
 
 El esquema y circuito físico se ven así:
 
-<img src="img\circuit_diagram_darlington.png" alt="Diagrama del circuito" width="600"/>
-<img src="img\real_circuit_darlington.jpg" alt="Foto final del hardware" width="316"/>
+<img src="img\circuit_diagram_darlington.png" alt="Diagrama del circuito" width="500"/> <img src="img\real_circuit_darlington.jpg" alt="Foto final del hardware" width="264"/>
 
 **2. BJT:**
 
 La segunda forma, que también se calentaba bastante, aunque no pareciera superar los 80°C en máximo funcionamiento, son los BJT [TIP120 conectados con resistencias](https://learn.adafruit.com/rgb-led-strips/usage), los que requieren una resistencia de 10k base desde la placa ESP32 para operar de manera correcta. Obtenemos la ventaja de operar a una temperatura ligeramente menor, pero hace un poco más engorroso el circuito al tener las resistencias más conexiones adicionales.
 
-<img src="img\circuit_diagram_bjt.png" alt="Diagrama del circuito" width="600"/>
+<img src="img\circuit_diagram_bjt.png" alt="Diagrama del circuito" width="500"/>
 
 **3. Mosfet:**
 
@@ -89,8 +88,8 @@ Finalmente, la tercera forma (y mejor candidata), es utilizar Mosfets tipo N. En
 
 Por seguridad y eficiencia térmica, esta fue la opción final elegida, además que a la vista, pareciera que al consumir menos corriente, las luces led brillan con más fuerza en comparación a las dos opciones anteriores. El esquema y circuito físico se ven así:
 
-<img src="img\circuit_diagram_mosfet_final.png" alt="Diagrama del circuito" width="600"/>
-<img src="img\real_circuit_mosfet.jpg" alt="Foto final del hardware" width="316"/>
+<img src="img\circuit_diagram_mosfet_final.png" alt="Diagrama del circuito" width="500"/>
+<img src="img\real_circuit_mosfet.jpg" alt="Foto final del hardware" width="310"/>
 
 
 ### Software: Explicación del código general
