@@ -16,8 +16,7 @@ En lo personal elegí [Blynk](https://blynk.io/) para operar a través de intern
 El circuito original de las luces LED a partir de ingeniería reversa fue sacado de [acá principalmente](https://www.hackster.io/ashish_8284/making-smart-led-strip-from-boring-ir-controller-led-strip-22b0f9). En la foto se vería así
 
 
-<img src="img\front_circuit.png" alt="Circuito original front" width="420"/>
-<img src="img\back_circuit.png" alt="Circuito original back" width="300"/>
+<img src="img\front_circuit.png" alt="Circuito original front" width="420"/>  <img src="img\back_circuit.png" alt="Circuito original back" width="300"/>
 
 ## Control mediante señales IR hacia el chip de la tira de luces (opción descartada)
 
